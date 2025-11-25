@@ -17,8 +17,6 @@ function setup() {
       brushes.push(new particle(width/2, height/2, random(1, 7), 7));
     }
 
-  
-
 }
 
 function draw() {
