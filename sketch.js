@@ -10,12 +10,14 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   background(backCol);
 
+  numParticles = random(10, 300);
+
   for (let i = 0; i < numParticles; i++)
     {
       brushes.push(new particle(width/2, height/2, random(1, 7), 7));
     }
 
-  numParticles = random(10, 300);
+  
 
 }
 
