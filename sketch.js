@@ -1,6 +1,6 @@
 let brushes = [];
 
-let numParticles = random(10, 300);
+let numParticles;
 
 let backCol = 0;
 
@@ -15,6 +15,7 @@ function setup() {
       brushes.push(new particle(width/2, height/2, random(1, 7), 7));
     }
 
+  numParticles = random(10, 300);
 
 }
 
