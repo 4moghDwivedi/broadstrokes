@@ -2,20 +2,22 @@ let brushes = [];
 
 let numParticles;
 
-let backCol = 0;
+let backCol;
 
 let count = 0;
 function setup() {
   // Create a canvas that fills the entire browser window
   createCanvas(windowWidth, windowHeight);
+  backCol = 0;
   background(backCol);
 
-  numParticles = random(10, 300);
+   numParticles = random(10, 300);
 
   for (let i = 0; i < numParticles; i++)
     {
       brushes.push(new particle(width/2, height/2, random(1, 7), 7));
     }
+
 
 }
 

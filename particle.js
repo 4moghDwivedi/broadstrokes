@@ -38,19 +38,22 @@ class particle{
 
     display()
     {
-        angleMode(DEGREES);
-        for (let i = 0; i < 3; i++)
-            {
-                
-                if(random(100) < 99) noStroke();
-                else{
-                    stroke("silver");
-                    strokeWeight(0.05);
+        if(frameCount > 60)
+        {
+            angleMode(DEGREES);
+            for (let i = 0; i < 3; i++)
+                {
+                    
+                    if(random(100) < 99) noStroke();
+                    else{
+                        stroke("silver");
+                        strokeWeight(0.05);
+                    }
+                    fill(this.r * random(0.9, 1), this.g* random(0.9, 1), this.b* random(0.9, 1), this.a[i] * random(0, 1));
+                    ellipse(this.finalX[i], this.finalY[i], this.finalH[i], this.finalW[i]);
+                    
                 }
-                fill(this.r * random(0.9, 1), this.g* random(0.9, 1), this.b* random(0.9, 1), this.a[i] * random(0, 1));
-                ellipse(this.finalX[i], this.finalY[i], this.finalH[i], this.finalW[i]);
-                
-            }
+        }
 
     }
 
